@@ -1,0 +1,1135 @@
+/*
+Theme Name: newbeat
+Author: Chris Brimelow
+Description: Bootstrap template for Press Release Website
+Version: 0.0.1
+*/
+
+$darkBlue: #01142e;
+$purple: #473192;
+$medBlue: #277EC2;
+$orange: #f1525e;
+$white : white;
+$red: #ee2937;
+$turquoise: #007b88;
+$lightTurquoise: #b8b0d5;
+$lightBlue: #81bec3;
+$tan: #d8d2c4;
+$yellow: #fcaf17;
+$lightYellow: #ffdca2;
+$pastelYellow: #ffedcf;
+$pastelPink: #fcd7c7;
+$pastelBlue: #daecf0;
+$pastelPurple: #efecf5;
+$darkGray: #535B67;
+$textGray: #4d4d4f;
+
+$xBreak : 320px;
+$xsBreak : 480px;
+$smBreak : 768px;
+$mdBreak : 992px;
+$lrgBreak : 1200px;
+
+
+$font-primary:arial,helvetica, 'san-serif'; 
+$font-open-sans: 'Open Sans', 'sans-serif';
+$font-gotham: 'Gotham SSm A', 'Gotham SSm B';
+$font-light: 300;
+$font-regular: 500;
+$font-bold: 700;
+
+
+body {
+	background-color: $white;
+	color: $textGray;
+	font-family: $font-open-sans;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: $font-regular;
+	line-height: 1.6em;
+	.noScroll {
+		overflow: hidden;
+	}
+}
+a:link, a:hover, a:active, a:visited {
+	color: $turquoise;
+	text-decoration: underline;
+}
+img {
+	max-width: 100%;
+}
+a {
+	&.pr-button {
+		border: 4px solid $white;
+		color: $white;
+		padding: 16px 34px;
+		text-transform: uppercase;
+		font-size: 13px;
+		display: inline-block;
+		text-decoration: none;
+		&:hover{
+			 text-decoration: none;
+		}
+	}
+}
+#social-top {
+	background-color: $darkBlue;
+	padding: 16px 0;
+	text-align: right;
+	.main-logo-mobile {
+		display: none;
+		@media only screen and (max-width: $smBreak) {
+			display: block;
+			width: 60%;
+		}
+	}
+	.sponsor-logos {
+		img {
+			display: inline-block;
+			@media only screen and (max-width: $smBreak) {
+				height: 30px;
+			}
+		}
+		@media only screen and (max-width: $smBreak) {
+			margin-top: 20px;
+		}
+	}
+
+	.logo-ABC {
+		margin-right: 40px;
+	}
+	.nav-toggle {
+		text-align: left;
+		padding-top: 10px;
+		.hamburglar {
+			cursor: pointer;
+			@media only screen and (max-width: $smBreak) {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+			}
+		}
+	}
+	.social {
+		padding-top: 10px;
+		@media only screen and (max-width: $smBreak) {
+			padding-top: 0;
+			margin-top: -20px;
+		}
+	}
+	.social img {
+		display: inline-block;
+		margin-right: 20px;
+	}
+	p {
+		display: inline-block;
+		color: $white;
+		font-weight: $font-bold;
+		text-transform: uppercase;
+		font-size: 14px;
+		margin: 0 20px 0 0;		
+	}
+	form {
+		display: inline-block;
+		@media only screen and (max-width: $smBreak) {
+			text-align: left;
+		}
+	}
+	.padlock {
+		display: inline-block;
+		margin: 0 0 12px 8px;
+	}
+	#user_login {
+		padding: 10px;
+		border: none;
+		background-color: $white !important;	
+		@media only screen and (max-width: $smBreak) {
+			margin-bottom: 10px;
+		}
+	}
+	#user_pass {
+		padding: 10px;
+		border: none;
+		background-color: $white !important;
+		@media only screen and (max-width: $smBreak) {
+			margin-right: 10px;
+		}
+	}
+	#wp-submit {
+		padding: 8px 10px;
+		background-color: $red;
+		border: 2px solid $white;
+		color: #ffffff;
+		text-transform: uppercase;
+	}
+	.logout {
+		display: inline-block;
+		padding: 9px 40px 7px 14px;
+		background-color: $red;
+		background-image: url(../images/logout-arrow.png);
+		background-position: 78px 10px;
+		background-repeat: no-repeat;	
+		border: 2px solid $white;
+		color: $white;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 12px;
+		font-weight: $font-light;
+		@media only screen and (max-width: $smBreak) {
+			margin: 10px 8px 0 0;
+		}			
+	}
+	.welcome {
+		font-weight: $font-light;
+	}
+}
+#hero {
+	height: 177px;
+	background-image: url(../images/hero-1-bg.jpg);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.logo-main {
+		display: block;
+		margin-top: 24px; 
+	}
+}
+#carousel {
+	height: 391px;
+	color: $white;
+	position: relative;
+	@media only screen and (max-width: $smBreak) {
+		height: 200px;
+	}
+	.slide {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		@media only screen and (max-width: $smBreak) {
+			background-size: cover;
+		}
+	}
+
+	#slide-0 {
+		background-image: url(../images/carousel-0-bg.jpg);
+		z-index: 9;
+	}
+	#slide-1 {
+		background-image: url(../images/carousel-1-bg.jpg);
+		z-index: 8;
+	}
+	#slide-2 {
+		background-image: url(../images/carousel-2-bg.jpg);
+		z-index: 7;
+	}
+	#slide-3 {
+		background-image: url(../images/carousel-3-bg.jpg);
+		z-index: 6;
+	}
+	
+
+	.framer {
+		height: 391px;
+		display: table;
+		position: relative;
+		@media only screen and (max-width: $smBreak) {
+			height: 200px;
+		}
+		.carousel-nav {
+			position: absolute;
+			left: 0;
+			bottom: 30px;
+			@media only screen and (max-width: $smBreak) {
+				display: none;
+			}
+			.dot {
+				display: inline-block;
+				background: $purple;
+				width: 12px;
+				height: 12px;
+				border-radius: 12px;
+				margin: 1px;
+				cursor: pointer;
+			}
+			.current {
+				background: $red;
+			}
+		}
+	}
+	.framee {
+		display: table-cell;
+		vertical-align: middle;
+		min-width: 100px;
+	}
+	h1 {
+		font-weight: $font-regular;
+		font-size: 80px;
+		line-height: 1em;
+		text-transform: uppercase;
+		color: $medBlue;
+		margin: 0 0 12px;
+		@media only screen and (max-width: $smBreak) {
+			font-size: 28px;
+			line-height: 1.4em;
+		}
+	}
+	p {
+		font-size: 30px;
+		line-height: 1em;
+		margin: 0 0 20px;
+		@media only screen and (max-width: $smBreak) {
+			font-size: 18px;
+			line-height: 1.4em;
+		}		
+	}
+}
+nav {
+	&#main {
+		background-color: $purple;
+		border-bottom: 4px solid $red;
+		@media only screen and (max-width: $smBreak) {
+			border-bottom: 0;
+		}
+		.logo-new-beat {
+			display: block;
+			margin: 5px 0 0;
+			@media only screen and (max-width: $smBreak) {
+				display: none;
+			}
+		}
+		.nav-list {
+			text-align: right;
+		}
+		ul {
+			margin-bottom: 0;
+			padding: 0;
+		}
+		li {
+			list-style: none;
+			display: inline-block;
+			position: relative;
+			text-align: left;
+			-webkit-transition: background-color .5s;
+			transition: background-color .5s;			
+			a {
+				font-size: 16px;
+				font-family: $font-open-sans;
+				text-transform: uppercase;
+				color: $white;
+				padding: 34px 20px 32px;
+				display: block;
+				text-decoration: none;
+				@media only screen and (max-width: $mdBreak) {
+					font-size: 12px;
+					padding: 34px 10px 32px;
+				}
+				@media only screen and (max-width: $smBreak) {
+					font-size: 14px;
+					padding: 24px 10px 22px;
+				}
+			}
+			&:hover{
+				background-color: $red;
+				@media only screen and (max-width: $smBreak) {
+					background-color: $purple;
+				}
+			}
+			&.current_page_item {
+				& > {
+					a {
+						background-color: $red;
+					}
+				}
+			}
+			ul {
+				opacity: 0;
+				visibility: hidden;
+				position: absolute;
+				top: 84px;
+				background-color: $medBlue;
+				z-index: 999;
+				-webkit-transition: visibility 0s, opacity 0.5s linear;
+				transition: visibility 0s, opacity 0.5s linear;
+				li {
+					a {
+						color: $white;
+						width: 280px;
+						padding: 12px 20px 10px;
+						text-transform: none;
+					}
+					@media only screen and (max-width: $smBreak) {
+						border: 0;
+					}
+				}
+				@media only screen and (max-width: $smBreak) {
+					opacity: 1;
+					visibility: visible;
+					background-color: $purple;
+					position: static;
+					margin-left: 20px;
+				}
+			}
+			.children {
+				@media only screen and (max-width: $smBreak) {
+					padding-bottom: 20px;
+				}
+			}
+			&:hover{
+				ul {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+			@media only screen and (max-width: $smBreak) {
+				display: block;
+				border-bottom: 1px solid #64aeb7;
+			}
+		}
+		@media only screen and (max-width: $smBreak) {
+			position: fixed;
+			top: 0;
+			right: -150%;
+			z-index: 1000;
+			-webkit-transition: right 0.5s linear;
+			transition: right 0.5s linear;
+		}
+	}	
+	.closearrow {
+		margin-top: 60px;
+		margin-right: 10px;
+		text-align: right;
+		img {
+			cursor: pointer;
+		}
+	}
+}
+
+article {
+	&#main-home {
+		color: $white;
+		padding: 70px 0;
+		text-align: center;
+		background-image: url(../images/gradient.png);
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media only screen and (max-width: $smBreak) {
+			padding: 20px 0;
+		}
+		.quote-img img {
+			width: 50%;
+		}
+		.quote-text p {
+			text-align: center;
+			font-size: 32px;
+			font-weight: $font-light;
+			line-height: 1.4em;
+			@media only screen and (max-width: $smBreak) {
+				font-size: 20px;
+				line-height: 1.6em;
+			}
+		}
+		.quote-section {
+			margin: 50px 0;
+		}
+		.icon-section {
+			margin: 50px 0;
+			img {
+				display: block;
+				margin: 0 auto 40px;
+				height: 200px;
+				@media only screen and (max-width: $smBreak) {
+					height: 100px;
+				}
+			}
+			p {
+				text-align: center;
+				font-size: 20px;
+				line-height: 1.4em;
+				padding: 0 20%;
+			}
+		}
+	}
+	&#blog-home {
+		color: $white;
+		padding: 50px 0 70px;
+		text-align: left;
+		background-color: $lightTurquoise;
+		font-size: 16px;
+		font-family: $font-open-sans;
+		h1 {
+			font-weight: $font-bold;
+			font-size: 60px;
+			line-height: 1.4em;
+			color: $purple;
+			margin: 0 0 12px;
+			@media only screen and (max-width: $smBreak) {
+				font-size: 28px;
+				line-height: 1.4em;
+			}			
+		}
+		.blog-title {
+			font-weight: $font-regular;
+			font-size: 40px;
+			line-height: 1.4em;
+			color: $white;
+			margin: 0 0 12px;
+			@media only screen and (max-width: $smBreak) {
+				font-size: 28px;
+				line-height: 1.4em;
+			}			
+		}
+		.post-title {
+			margin: 40px 0 16px;
+		}
+		a {
+			color: $white;
+			margin-top: 16px;
+			display: block;
+		}
+		.divider {
+			border-right: 2px solid $white;
+			@media only screen and (max-width: $smBreak) {
+				border-right: 0;
+			}
+		}
+	}
+	&#main {
+		padding: 70px 0;
+		h2 {
+			font-weight: $font-bold;
+			font-size: 30px;
+			color: $turquoise;
+			margin: 0 0 30px;
+			text-transform: uppercase;
+			@media only screen and (max-width: $smBreak) {
+				font-size: 24px;
+				line-height: 1.4em;
+			}			
+		}
+		h3 {
+			font-weight: $font-bold;
+			font-size: 18px;
+			color: $turquoise;
+			margin: 0 0 6px;
+			text-transform: uppercase;
+			&.red {
+				color: $red;
+			}
+		}
+		p {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+ul {
+	&.arrow-bullets  {
+		list-style-image:url(../images/bullet-arrow.png);
+		margin-bottom: 30px;
+	}
+}
+.section-title {
+	font-weight: $font-regular;
+	font-size: 46px;
+	line-height: 1.4em;
+	text-transform: uppercase;
+	color: $white;
+	margin: 0 0 40px;
+	@media only screen and (max-width: $smBreak) {
+		font-size: 36px;
+		line-height: 1.4em;
+	}	
+}
+.section-subtitle {
+	font-weight: $font-regular;
+	font-size: 36px;
+	line-height: 1.4em;
+	text-transform: uppercase;
+	color: $white;
+	margin: 20px 0 20px;
+	@media only screen and (max-width: $smBreak) {
+		font-size: 28px;
+		line-height: 1.4em;
+	}	
+	&.divider {
+		border-top: 2px solid $white;
+		margin-top: 60px;
+		padding-top: 60px;
+	}
+}
+.page-content {
+	padding: 50px 0;
+}
+#resources {
+	background-image: url(../images/resources-bg.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	color: $white;
+	.icon-section {
+		font-size: 18px;
+		line-height: 1.4em;
+		margin-bottom: 80px;
+		img {
+			height: 140px;
+		}
+		h3 {
+			font-size: 30px;
+			line-height: 1.4em;
+		}
+		p {
+			padding: 0 15%;
+		}
+		.learn-more {
+			background: $white;
+			font-weight: bold;
+			border-radius: 8px;
+			color: $red;
+			display: inline-block;
+			padding: 10px 14px;
+			text-decoration: none;
+			margin-top: 20px;
+		}
+	}
+	.text-link {
+		color: $white;
+	}
+}
+#resources-general {
+	background-color: $orange;
+	text-align: left;
+	color: $white;
+}
+#resources-inner {
+	background-color: $purple;
+	text-align: left;
+	color: $white;
+	h4 {
+		font-size: 24px;
+		line-height: 1.4em;
+		margin-top: 30px;
+	}
+	.section-title {
+		text-align: center;
+	}
+	.resources-hero {
+		display: block;
+		margin-bottom: 40px;
+	}
+}
+#our-mission {
+	background-color: $medBlue;
+	text-align: center;
+	color: $white;
+	&.page-content {
+		padding-bottom: 0;
+	}
+}
+#advisory-committee {
+	background-color: $white;
+	text-align: center;
+	.committee-member {
+		margin-bottom: 40px;
+	}
+	.section-title {
+		color: $red;
+	}
+	.red {
+		color: $red;
+	}
+	.headshot img {
+		display: block;
+		margin-bottom: 20px;
+	}
+	.people {
+		text-align: left;
+	}
+
+}
+#founders {
+	background-color: $white;
+	text-align: center;
+	.section-title {
+		color: $medBlue;
+		@media only screen and (max-width: $mdBreak) {
+			margin-bottom: 0;	
+		}
+	}
+	.icon-section {
+		.logo {
+			display: block; 
+			margin: 80px auto 40px;
+			@media only screen and (max-width: $mdBreak) {
+				width: 40%;
+			}
+		}
+	}
+}
+#partners {
+	background-color: $white;
+	text-align: left;
+	.section-title {
+		color: $purple;
+		text-align: center;
+	}
+	.learn-more {
+		background: $red;
+		font-weight: bold;
+		border-radius: 8px;
+		color: $white;
+		display: inline-block;
+		padding: 10px 14px;
+		text-decoration: none;
+		margin-top: 20px;
+	}
+	.logo {
+		display: block; 
+		@media only screen and (max-width: $mdBreak) {
+			width: 40%;
+			margin: 80px auto 40px;
+		}
+	}
+	@media only screen and (max-width: $smBreak) {
+		text-align: center;
+	}
+}
+#events {
+	background-color: $white;
+	text-align: left;
+	h2 {
+		font-size: 24px;
+		line-height: 1.4em;
+		margin-top: 30px;
+	}
+	.section-title {
+		color: $medBlue;
+		text-align: center;
+	}
+	.event {
+		text-align: center;
+		h2 {
+			color: $medBlue;
+		}
+		p {
+			margin: 0 20% 20px;
+		}
+	}
+}
+
+#get-involved {
+	background-color: $white;
+	text-align: left;
+	h2 {
+		font-size: 24px;
+		line-height: 1.4em;
+		margin-top: 30px;
+	}
+	.section-title {
+		text-align: center;
+		color: $darkGray;
+	}
+	.get-involved-hero {
+		display: block;
+		margin-bottom: 40px;
+	}
+}
+.display-posts-listing {
+	.listing-item {
+		margin: 40px 0;
+		.title {
+			color: $white;
+			border-bottom: 3px solid $white;
+			text-transform: uppercase;
+			display: block;
+			text-decoration: none;
+			font-size: 22px;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+		}
+	}
+}
+#footer {
+	background-color: $darkBlue;
+	text-align: center;
+	padding: 50px 0 180px;
+	color: $white;
+	font-size: 14px;
+	font-family: $font-open-sans;
+	a {
+		color: $white;
+		text-decoration: none;
+		&:hover {
+			color: $lightTurquoise;
+		}
+	}
+
+	ul {
+		padding-left: 0;
+	}
+	li {
+		list-style: none;
+	}
+	ul > li {
+		float: left;
+		margin-right: 40px;
+		text-transform: uppercase;
+		text-align: left;
+		@media only screen and (max-width: $smBreak) {
+			float: none;
+			margin-bottom: 20px;
+		}
+	}
+	ul > li > ul > li {
+		float: none;
+		text-transform: none;
+		margin-top: 10px;
+	}
+	p {
+		margin-bottom: 30px;
+	}
+	.contact {
+		padding-top: 80px;
+	}
+	img {
+		&.social {
+			display: inline-block;
+			margin: 0 4px;
+		}
+	}
+	@media only screen and (max-width: $smBreak) {
+		.children {
+			padding-left: 20px;
+		}
+	}
+}
+
+.pdb-searchform {
+	margin: 20px 0;
+	legend {
+		margin-bottom: 0;
+		font-size: 14px;
+		text-transform: uppercase;
+    	font-weight: bold;
+		border-bottom: 0;
+	}
+	.radio-group {
+		label {
+			font-weight: normal;
+			font-size: 13px; 
+			input {
+				float: left !important;
+				margin-top: 6px;
+				margin-right: 6px;
+			}
+		}
+	}
+	input[type=submit] {
+		background: #ee3c2d;
+		color: #fff;
+		font-weight: 400;
+		text-transform: uppercase;
+		border: 0;
+		padding: 4px 12px;		
+	}
+}
+
+.wp-list-table {
+	width: 100%;
+    border-spacing: 5px;
+    border-collapse: separate;
+	margin-left: -5px;
+	/*border: 1px solid #d8d2c5;*/
+}
+
+#site-terms {
+	display: none;
+	width: 50%;
+	height: 450px;
+	background-color: $white;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 80px;
+	z-index: 999;
+	-moz-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+	@media only screen and (max-width: $smBreak) {
+		width: 100%;
+		height: auto;
+		padding: 10px;
+		font-size: 12px;
+		
+	}
+	a {
+		display: inline-block;
+		padding: 14px 80px;
+		margin: 40px 20px 0 0;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 14px;
+		color: $white;
+		@media only screen and (max-width: $smBreak) {
+			margin: 10px 0 0 0;
+		}
+		&.accept {
+			background-color: $turquoise;
+		}
+		&.decline {
+			background-color: $red;
+		}
+	}
+}
+
+#popup-bg {
+	display: none;
+	z-index: 998;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0; 
+}
+
+.twitter {
+	text-align: right;
+}
+#timeline {
+	margin: 40px 0;
+	 & > .container {
+		min-height: 900px;
+		position: relative;	
+	}
+	.day {
+		display: none;
+		position: absolute;
+		top: 120px;
+		left: 0;
+		&.current {
+			display: block;
+		}
+	}
+	.buttons {
+		padding-left: 90px;
+		padding-right: 12px;
+		position: relative;
+		.button {
+			background-color: $lightYellow;
+			padding: 24px 0 28px;
+			text-align: center;
+			color: $red;
+			margin: 2px;
+			text-transform: uppercase;
+			font-weight: $font-regular;
+			cursor: pointer;
+			-webkit-transition: background-color 1s, color .5s;
+			transition: background-color .5s, color .5s;
+			&.current {
+				background-color: $lightTurquoise;
+				color: $white;
+			}
+			span {
+				display: block;
+			}
+			.dayofwk {
+				font-size: 14px;
+				margin-bottom: 10px;
+				@media only screen and (max-width: $smBreak) {
+					font-size: 10px;
+				}					
+			}
+			.date {
+				font-size: 32px;
+				@media only screen and (max-width: $smBreak) {
+					font-size: 18px;
+				}				
+			}
+			&.viewAll {
+				position: absolute;
+				top: 0;
+				left: -18px;
+				width: 89px;
+				height: 106px;
+				padding: 42px 0 20px;
+				.allDays {
+					font-size: 12px;
+					line-height: 16px;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+	h4 { 
+		font-weight: $font-regular;
+		font-size: 24px;
+		color: $turquoise;
+		margin: 60px 0 10px;
+		text-transform: uppercase;	
+		padding-left: 76px;
+		@media only screen and (max-width: $smBreak) {
+			font-size: 14px;
+			margin-top: 20px;
+		}			
+	}
+	.grid {
+		background-image: url(../images/timeline-am-bg.jpg);
+		background-repeat: no-repeat;
+		background-position: top left;
+		padding-left: 90px;
+		.item-container {
+			border: 1px solid $tan;
+			margin-top: 10px;
+			min-height: 607px;
+			.item {
+				padding: 8px 20px;
+				margin-bottom: 2px;
+				color: $darkGray;
+				font-size: 11px;
+				line-height: 16px;
+				overflow: hidden;
+				&.trial {
+					height: 28.5px;
+				}				
+				&.t60m {
+					height: 56px;
+				}
+				&.t90m {
+					height: 86px;
+				}
+				&.t120m {
+					height: 116px;
+				}
+				&.empty {
+					height: 28px;
+					background-color: transparent !important;
+				}
+			}
+			&.all {
+				width: 25%;
+				display: inline-block;
+				vertical-align: top;
+				margin-right: -6px;
+				.item {
+					font-size: 10px;
+					line-height: 15px;
+				}
+			}
+		}
+	}
+	.sat {
+		.grid {
+			.item-container {
+				.item {
+					background-color: $pastelYellow;
+				}
+			}
+		}
+	}
+	.all {
+		.grid {
+			.item-container {
+				&.sat {
+					.item {
+						background-color: $pastelYellow;
+					}
+				}
+			}
+		}
+	}
+	.sun {
+		.grid {
+			.item-container {
+				.item {
+					background-color: $pastelPink;
+				}
+			}
+		}
+	}
+	.all {
+		.grid {
+			.item-container {
+				&.sun {
+					.item {
+						background-color: $pastelPink;
+					}
+				}
+			}
+		}
+	}
+	.mon {
+		.grid {
+			.item-container {
+				.item {
+					background-color: $pastelBlue;
+				}
+			}
+		}
+	}
+	.all {
+		.grid {
+			.item-container {
+				&.mon {
+					.item {
+						background-color: $pastelBlue;
+					}
+				}
+			}
+		}
+	}
+	.tue {
+		.grid {
+			.item-container {
+				.item {
+					background-color: $pastelPurple;
+				}
+			}
+		}
+	}
+	.all {
+		.grid {
+			.item-container {
+				&.tue {
+					.item {
+						background-color: $pastelPurple;
+					}
+				}
+			}
+		}
+	}
+}
+a.resources-download-btn {
+	background-image: url(../images/btn-download-bg.png);
+	background-repeat: no-repeat;
+	background-position: 448px 10px;
+	display: inline-block;
+	padding: 9px 46px 7px 16px;	
+	border: 2px solid $turquoise;
+	color: $turquoise;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: $font-regular;	
+}
+a.app-btn {
+	display: inline-block;
+    margin: 10px 0;	
+}
+
+
+
+
+
+
+
+
